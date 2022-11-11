@@ -1,0 +1,414 @@
+@font-face {
+    font-family: 'notableregular';
+    src: url('../fonts/notable-regular-webfont.woff2') format('woff2'),
+    url('../fonts/notable-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', 'Helvetica', 'sans-serif';
+    font-size: 1em;
+    color: #000;
+    background-color: #ccc;
+    padding: 0.2em;
+}
+
+body > header {
+    background: #333;
+    padding: 1.5em;
+    margin: 0 0 20px 0;
+    border-radius: 6px;
+    position: relative;
+}
+
+a {
+    color: #e42b06;
+    text-decoration: none;
+}
+
+ul, ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+video {
+    width: 100%;
+}
+
+header > h1 {
+    padding: 0;
+    margin: 0;
+}
+
+header > h1 > a {
+    background: url('../img/logo.png') no-repeat 0 0;
+    background-size: contain;
+    display: block;
+    height: 100px;
+    text-indent: -1000px;
+    overflow: hidden;
+}
+
+body > header > h2 {
+    padding: 0;
+    margin: 0;
+    color: #aaa;
+    font-size: 1.7em;
+    font-weight: 400;
+}
+
+nav {
+    font-size: 1.2em;
+    position: absolute;
+    top: 0;
+    right: 1.7em;
+    background-color: #cdcdcd;
+    padding: 0.8em;
+    margin: 40px 0 0;
+    text-align: center;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline-block;
+}
+
+nav a {
+    display: inline-block;
+    background-color: #e42b06;
+    color: #fff;
+    padding: 1em;
+}
+
+nav li:hover > a,
+nav li.active > a {
+    background-color: #111;
+}
+
+.side-menu {
+    display: none;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    padding: 24px 16px;
+    background: #e42b06;
+    position: absolute;
+    right: 0;
+    top: 81px;
+}
+
+.hamburger-line {
+    background: #fff;
+    display: block;
+    height: 2px;
+    position: relative;
+    width: 20px;
+}
+
+.hamburger-line::before,
+.hamburger-line::after {
+    background: #fff;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+}
+
+.hamburger-line::before {
+    top: 5px;
+}
+
+.hamburger-line::after {
+    top: -5px;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+}
+
+main {
+    background-color: #fff;
+    border-radius: 6px;
+    width: 100%;
+}
+
+main > section {
+    width: 100%;
+}
+
+aside {
+    vertical-align: top;
+    margin-left: 10px;
+    padding: 2em;
+    background-color: #fff;
+    flex: 0 0 400px;
+    border-radius: 6px;
+}
+
+aside .gallery figure {
+    margin: 0 0 1em 0;
+    font-size: .8em;
+    color: #555;
+}
+
+aside .gallery img {
+    width: 100%;
+    border: 10px double #ccc;
+}
+
+body > footer {
+    margin: 20px 0;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 6px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+}
+
+body > footer .statement {
+    text-transform: uppercase;
+    background: #Fa0;
+    opacity: .5;
+    text-align: center;
+    padding: 1rem;
+    flex: 0 0 150px;
+    position: absolute;
+    z-index: 9999;
+    right: 20px;
+    bottom: 5px;
+}
+
+body > footer .statement strong {
+    color: #fff;
+}
+
+body > footer .copyright {
+    text-transform: uppercase;
+    color: #222;
+    flex-grow: 1;
+}
+
+section h2 {
+    padding: 1em 3rem;
+    display: block;
+    border-bottom: 1px solid #000;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    color: #fff;
+    background: #333;
+    word-spacing: 0.3em;
+}
+
+/* Article */
+article {
+    padding: 1rem 3rem 2rem 3rem;
+    line-height: 1.5em;
+    display: flex;
+    flex-direction: column;
+}
+
+article h3,
+fieldset legend {
+    color: #e42b06;
+    font-family: 'notableregular', sans-serif;
+    letter-spacing: 0;
+    word-spacing: 0.2em;
+    line-height: 1.1em;
+    font-size: 2em;
+    margin: 0 0 1em 0;
+}
+
+article table {
+    width: 100%;
+}
+
+article table td,
+article table th {
+    border: 1px solid #ccc;
+    padding: .7em;
+    text-align: left;
+}
+
+article figure {
+    float: right;
+    margin: 0 0 2rem 2rem;
+    width: 50%;
+    min-width: 200px;
+    max-width: 600px;
+}
+
+article figure a img {
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+article figure img {
+    margin: 0;
+    width: 100%;
+}
+
+article figure figcaption {
+    border: 1px solid #ccc;
+    display: block;
+    margin: 0;
+    padding: 0 10px;
+    font-size: .75em;
+}
+
+article > footer {
+    border-top: 1px solid #e42b06;
+    color: #333;
+    font-size: 0.8em;
+}
+
+article > footer address {
+    display: inline;
+}
+
+article > footer address a {
+    text-transform: uppercase;
+}
+
+article a.more-info {
+    background: #e42b06;
+    color: #ffffff;
+    display: inline-block;
+    padding: 1px 10px;
+}
+
+/* Form elements */
+form {
+    margin: 0;
+    padding: 2rem;
+}
+
+fieldset {
+    border: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+fieldset input,
+fieldset textarea {
+    font-size: 1em;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    border: 1px solid #333;
+}
+
+fieldset input[type=submit] {
+    width: fit-content;
+}
+
+/* Media selectors */
+@media screen and (max-width: 480px) {
+    body > header {
+        padding: 20px 0;
+        min-height: 100px;
+    }
+
+    header .hamburger {
+        display: block;
+    }
+
+    header > nav {
+        max-height: 0;
+        overflow: hidden;
+        padding: 0;
+        margin: 30px 0 -20px 0;
+        width: 100%;
+    }
+
+    nav > ul > li {
+        display: block;
+    }
+
+    nav > ul > li > a {
+        display: block;
+        background-color: #e42b06;
+        color: #fff;
+        padding: 0.4em;
+    }
+
+    nav > ul > li > a:hover {
+        display: block;
+        background-color: #000;
+        color: #fff;
+        padding: 0.4em;
+    }
+
+    .side-menu:checked ~ nav {
+        max-height: 100%;
+    }
+
+    body > header > h1 > a {
+        height: 60px;
+        margin: 0 0 0 10px;
+    }
+
+    body > header > h2 {
+        padding: 0 0 0 10px;
+        font-size: 1.1em;
+    }
+
+    article section {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    article figure {
+        float: none;
+        margin: 2rem 0 0 0;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .container {
+        flex-direction: column;
+    }
+
+    article h3 {
+        font-size: 2em;
+        margin: 0 0 0 0;
+    }
+
+    aside {
+        margin: 0;
+        padding: 3rem;
+    }
+
+    body > footer .statement {
+        position: relative;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    nav {
+        margin: 40px 0 0;
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+
+    article figure {
+        float: left;
+        margin: 0 2rem 1rem 0;
+    }
+}
